@@ -12,7 +12,7 @@ from jira.exceptions import JIRAError
 
 from gjira.output import write_error
 
-GJIRA_START_TEXT = "Jira information:"
+GJIRA_START_TEXT = ""
 GIT_START_LINES = "# Please enter the commit message for your changes. Lines starting\n"
 
 
@@ -30,7 +30,6 @@ def issue_attr(
     attr_sep: str = ".",
     default=None,
 ):
-
     if hasattr(prop, attribute):
         return getattr(prop, attribute)
 
